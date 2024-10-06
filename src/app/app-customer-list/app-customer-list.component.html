@@ -1,0 +1,58 @@
+<div class="add-customer">
+  <button mat-flat-button color="primary" (click)="addPopup()">
+    Add customer
+  </button>
+</div>
+<div class="section">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.firstName }} {{ element.lastName }}
+      </td>
+    </ng-container>
+
+    <!-- Items Column -->
+    <ng-container matColumnDef="itemsPurchased">
+      <th mat-header-cell *matHeaderCellDef># of Items</th>
+      <td mat-cell *matCellDef="let element">{{ element.itemsPurchased }}</td>
+    </ng-container>
+
+    <!-- Amount Column -->
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let element">{{ element.amount }}</td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          class="edit"
+          mat-flat-button
+          color="primary"
+          [routerLink]="['/customerEdit']"
+          [state]="{ element: element }"
+          (click)="editCustomer(element)"
+        >
+          Edit
+        </button>
+        <button
+          class="delete"
+          mat-flat-button
+          color="warn"
+          (click)="openPopup(element)"
+        >
+          Delete
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <router-outlet></router-outlet>
+</div>

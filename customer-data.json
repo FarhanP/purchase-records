@@ -1,0 +1,39 @@
+{
+  "customers": [
+    {
+      "id": 0,
+      "firstName": "uzair",
+      "lastName": "p",
+      "itemsPurchased": 21,
+      "amount": 33
+    },
+    {
+      "id": 1,
+      "firstName": "Bobby",
+      "lastName": "Marley",
+      "itemsPurchased": 30,
+      "amount": 677
+    },
+    {
+      "id": 3,
+      "firstName": "Steve",
+      "lastName": "jobs",
+      "itemsPurchased": 22,
+      "amount": 442
+    },
+    {
+      "id": 5,
+      "firstName": "farhan",
+      "lastName": "23",
+      "itemsPurchased": 3,
+      "amount": 3
+    },
+    {
+      "id": 6,
+      "firstName": "far",
+      "lastName": "er",
+      "itemsPurchased": 2,
+      "amount": 4554
+    }
+  ]
+}

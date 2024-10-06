@@ -1,0 +1,15 @@
+h2 {
+  margin-bottom: 1rem;
+  font-weight: 200;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content p {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,44 @@
+<div class="update-form">
+  <h2>Edit Customer</h2>
+
+  <form class="customer-form" [formGroup]="customerForm" (submit)="onSubmit()">
+    <div class="input-field">
+      <input
+        formControlName="firstName"
+        type="text"
+        name="firstname"
+        placeholder="First Name"
+      />
+    </div>
+
+    <div class="input-field">
+      <input
+        formControlName="lastName"
+        type="text"
+        name="lastname"
+        placeholder="Last Name"
+      />
+    </div>
+    <div class="input-field">
+      <input
+        type="number"
+        formControlName="items"
+        name="items"
+        placeholder="Items Purchased"
+      />
+    </div>
+    <div class="input-field">
+      <input
+        formControlName="amount"
+        type="number"
+        name="amount"
+        placeholder="Amount"
+      />
+    </div>
+    <div class="btn">
+      <button class="update-button" mat-flat-button color="primary">
+        Update
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+<div class="add-form">
+  <h2 [ngStyle]="{ color: 'red' }">Add Customer</h2>
+
+  <form class="customer-form" [formGroup]="customerForm" (submit)="onSubmit()">
+    <div class="input-field">
+      <input
+        formControlName="firstName"
+        type="text"
+        name="firstname"
+        placeholder="First Name"
+      />
+    </div>
+
+    <div class="input-field">
+      <input
+        formControlName="lastName"
+        type="text"
+        name="lastname"
+        placeholder="Last Name"
+      />
+    </div>
+    <div class="input-field">
+      <input
+        type="number"
+        formControlName="items"
+        name="items"
+        placeholder="Items Purchased"
+      />
+    </div>
+    <div class="input-field">
+      <input
+        formControlName="amount"
+        type="number"
+        name="amount"
+        placeholder="Amount"
+      />
+    </div>
+    <div class="btn">
+      <button class="update-button" mat-flat-button color="primary">Add</button>
+    </div>
+  </form>
+</div>
